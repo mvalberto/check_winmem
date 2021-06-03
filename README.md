@@ -10,7 +10,7 @@ check_winmem = check_mem.ps1<br/>
 Definición del comando en Nagios:<br/>
 
 define command <br/>
-{
+{<br/>
 	command_name	check_winmem <br/>
 	command_line	$USER1$/check_nrpe -H $HOSTADDRESS$ -t 30 -p 5666 -c check_winmem<br/>
 }<br/>
