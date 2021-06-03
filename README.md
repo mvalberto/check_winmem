@@ -1,28 +1,28 @@
 # check_winmem
-Auto optimice memory usage in windows server 
+Optimización automatica de memoria en windows con Nagios y RAMRush<br/>
 
-Es necesario añadir las siguientes lineas en el fichero nsclient.ini
+Es necesario añadir las siguientes lineas en el fichero nsclient.ini<br/>
 
-[/settings/external scripts/wrapped scripts]
-check_winmem = check_mem.ps1
+[/settings/external scripts/wrapped scripts]<br/>
+check_winmem = check_mem.ps1<br/>
 
 
-Definición del comando en Nagios:
+Definición del comando en Nagios:<br/>
 
-define command
+define command <br/>
 {
-	command_name	check_winmem
-	command_line	$USER1$/check_nrpe -H $HOSTADDRESS$ -t 30 -p 5666 -c check_winmem
-}
+	command_name	check_winmem <br/>
+	command_line	$USER1$/check_nrpe -H $HOSTADDRESS$ -t 30 -p 5666 -c check_winmem<br/>
+}<br/>
 
 
-Definición del servicio en Nagios:
+Definición del servicio en Nagios:<br/>
 
-define service
-{
-	use			generic-service
-	host_name		HOST
-	service_description		Memory Usage
-	check_command		check_winmem! 
+define service<br/>
+{<br/>
+	use			generic-service<br/>
+	host_name		HOST<br/>
+	service_description		Memory Usage<br/>
+	check_command		check_winmem! <br/>
 
-}
+}<br/>
