@@ -1,7 +1,8 @@
 # check_winmem
-Optimización automatica de memoria en windows con Nagios y RAMRush<br/>
+Optimización automatica de memoria en windows con Nagios y RAMRush <br/>
+Ejecutar instalador para alojar los ficheros necesarios en C:\Program Files\NSClient++\scripts <br/>
 
-Es necesario añadir las siguientes lineas en el fichero nsclient.ini<br/>
+Es necesario añadir las siguientes lineas en el fichero nsclient.ini <br/>
 
 [/settings/external scripts/wrapped scripts]<br/>
 check_winmem = check_mem.ps1<br/>
