@@ -13,7 +13,7 @@ Definición del comando en Nagios:<br/>
 define command <br/>
 {<br/>
 	command_name	check_winmem <br/>
-	command_line	$USER1$/check_nrpe -H $HOSTADDRESS$ -t 30 -p 5666 -c check_winmem<br/>
+	command_line	$USER1$/check_nrpe -H $HOSTADDRESS$ -t 60 -n -p 5666 -c check_winmem $ARG1$ $ARG2$  <br/>
 }<br/>
 
 
@@ -24,6 +24,6 @@ define service<br/>
 	use			generic-service<br/>
 	host_name		HOST<br/>
 	service_description		Memory Usage<br/>
-	check_command		check_winmem! <br/>
+	check_command		check_winmem! -a 45 15<br/>
 
 }<br/>
