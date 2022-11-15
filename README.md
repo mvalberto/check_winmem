@@ -2,11 +2,11 @@
 Optimización automatica de memoria en windows con Nagios y RAMRush <br/>
 Alojar los 3 ficheros necesarios en C:\Program Files\NSClient++\scripts <br/>
 
-Es necesario añadir las siguientes lineas en el fichero nsclient.ini <br/>
-
-[/settings/external scripts/wrapped scripts]<br/>
-check_winmem = check_mem.ps1  $ARG1$ $ARG2$ <br/>
-
+nsclient.ini <br/>
+```yaml
+[/settings/external scripts/wrapped scripts]
+check_winmem = check_mem.ps1  $ARG1$ $ARG2$ 
+```
 
 Definición del comando en Nagios:
 ```yaml
