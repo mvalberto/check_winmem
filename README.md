@@ -24,7 +24,7 @@ define service
         use			generic-service
         host_name		HOST
         service_description     Memory Usage
-        check_command		check_winmem! 45 15
+        check_command		check_winmem! 25 15
 
 }
 ```
