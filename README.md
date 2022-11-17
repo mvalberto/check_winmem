@@ -12,7 +12,7 @@ check_winmem = check_mem.ps1  $ARG1$ $ARG2$
 ```yaml
 define command 
 {
-       command_name	check_winmem <br/>
+       command_name	check_winmem 
        command_line	$USER1$/check_nrpe -H $HOSTADDRESS$ -t 60 -n -p 5666 -c check_winmem -a $ARG1$ $ARG2$ 
 }
 ```
